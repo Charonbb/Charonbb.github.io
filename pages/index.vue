@@ -18,10 +18,7 @@
       through non-trivial solutions.
     </div>
     <div class="mt-4">
-      Interested in working together? Feel free to reach out to me on
-      <NuxtLink to="/contact" class="text-primary-300 hover:text-primary-500"
-        >contact page</NuxtLink
-      >.
+      Interested in working together? Feel free to reach out to me.
     </div>
   </div>
 </template>
