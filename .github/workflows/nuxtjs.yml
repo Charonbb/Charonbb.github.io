@@ -54,10 +54,12 @@ jobs:
         run: pnpm install
       - name: Static HTML export with Nuxt
         run: pnpm run generate --prerender
+      - name: List files in workspace
+        run: ls -R
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: ./output/public
+          path: ./dist
 
   # Deployment job
   deploy:
