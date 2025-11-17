@@ -490,7 +490,7 @@ body {
     width: 90vw;
     margin: 0px 5vw;
     text-align: left;
-    margin-top: 0vh;
+    margin-top: -25vh;
     z-index: 1;
   }
 
