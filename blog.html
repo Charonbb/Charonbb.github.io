@@ -1,0 +1,96 @@
+
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="./index.css">
+</head>
+  <body>
+    <div id="loading">
+      <div id="spinner"></div>
+    </div>
+    <a href="./index.html" class="go_back"><i class="fas fa-arrow-left"></i></a>
+    <div id="background_overlay"></div>
+    <div id="background" style="background: url() center;"></div>
+    <table id="profile_blog">
+      <tbody>
+        <tr>
+          <td style="width:8vw;"><div id=""></div></td>
+          <td style="width:52vw;">
+            <div id="username_blog"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="blog-display">
+<h1 id="blog_title">Привет! Меня зовут Байэл, и я ищу свой путь в большом IT.</h1>
+<h2 id="blog_sub_title">
+    Я начинающий QA-инженер (всего 6 месяцев опыта), но у меня есть большая мечта: стать Full-Stack специалистом, который отвечает за весь процесс.
+</h2>
+<div id="blog">
+    
+    <h3>Как я пришел в QA и почему остался</h3>
+    
+        Мой путь в IT начался немного хаотично. Я пробовал себя в Frontend, и даже чуть не стал Junior-разработчиком, но в какой-то момент просто выдохся. Мне казалось, что что-то не так. Потом дядя подсказал мне попробовать QA. И я понял: здесь мне интересно! Я могу сочетать внимание к деталям и постоянно искать что-то новое.
+    
+
+    <h3>Моя цель: Комплексный подход</h3>
+    
+        Сейчас я сосредоточен на ручном тестировании (мобильные, десктопные приложения) и отлично освоил базовые инструменты вроде Jira и Postman. Но я хочу большего. Моя амбиция — стать Full-Stack специалистом. Я считаю, что настоящий профессионал должен понимать, как работает и Front-end, и Back-end, и, конечно, как это всё протестировать. Только так можно по-настоящему помочь компании вырасти.
+    
+    <p>
+        Для этого я уже использую свои базовые знания Python и HTML/CSS. Мой план — двигаться по роадмапу (roadmap.sh/qa), параллельно осваивая автоматизацию, и изучая тестирование безопасности и нагрузку. Учиться сложно, но это часть пути!
+    </p>
+
+    <h3>Мой мир вне работы: Баланс и вдохновение</h3>
+    
+        Чтобы не выгореть, я обязательно переключаюсь. Я очень люблю слушать музыку, смотреть сериалы, кино и аниме — это мой способ расслабиться и получить вдохновение. Когда есть время, стараюсь ходить на мероприятия и просто гулять и общаться с людьми, чтобы расширить свой кругозор.
+    
+    <p>
+        А еще я большой фанат игр. Ролевые игры вроде Skyrim и Fallout, а также PUBG — это не просто отдых. Они учат меня стратегически думать и обращать внимание на мелочи, что, кстати, отлично помогает и в работе QA!
+    </p>
+</div>
+    <div id="footer_blog">
+      <a href="https://github.com/imfunniee" target="_blank"></a>
+    </div>
+    <script type="text/javascript">
+      setTimeout(function() {
+        document.getElementById("loading").classList.add("animated");
+        document.getElementById("loading").classList.add("fadeOut");
+        setTimeout(function() {
+          document.getElementById("loading").classList.remove("animated");
+          document.getElementById("loading").classList.remove("fadeOut");
+          document.getElementById("loading").style.display = "none";
+        }, 800);
+      }, 1500);
+      $.getJSON("../../config.json", function(user) {
+        var icon = document.createElement("link");
+        icon.setAttribute("rel", "icon");
+        icon.setAttribute("href", user[0].userimg);
+        icon.setAttribute("type", "image/png");
+        document.getElementsByTagName("head")[0].appendChild(icon);
+        document.getElementById(
+          "profile_img_blog"
+        ).style.background = `url('${user[0].userimg}') center center`;
+        document.getElementById(
+          "username_blog"
+        ).innerHTML = `<span style="display:${
+          user[0].name == null || !user[0].name ? "none" : "block"
+        };">${user[0].name}</span>@${user[0].username}<b id="blog_time"></b>`;
+
+        if ((user[0].theme = "dark.css")) {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.1))";
+        } else {
+          document.querySelector("#background_overlay").style.background =
+            "linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1))";
+        }
+      });
+    </script>
+  
+
+</body></html>
