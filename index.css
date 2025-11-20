@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
-@import url("https://fonts.googleapis.com/css?family=Questrial");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   margin: 0%;
@@ -10,7 +9,8 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif; 
+  font-weight: 400; 
 }
 
 #loading {
@@ -61,7 +61,7 @@ body {
   background-size: cover !important;
   background-repeat: no-repeat;
   position: fixed;
-  color: #fff !important;
+  color: #000000 !important;
 }
 
 #display {
@@ -75,8 +75,8 @@ body {
 #display h1 {
   font-size: 50px;
   color: var(--text-color);
-  font-weight: bold;
-  font-family: "Questrial", sans-serif;
+  font-weight: 600; 
+  font-family: "Montserrat", sans-serif;
 }
 
 .emoji {
@@ -95,18 +95,21 @@ body {
 #username_blog {
   font-size: 18px;
   color: var(--text-color);
-  font-family: "Poppins", sans-serif;
+  /* INTER для подписи */
+  font-family: "Inter", sans-serif;
   font-weight: bold;
 }
 
 #username_blog span {
   font-size: 24px;
-  font-family: "Questrial", sans-serif !important;
+  /* --- MONTSERRAT ДЛЯ КРУПНОГО ТЕКСТА --- */
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700;
 }
 
 #username_blog b {
   font-size: 12px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bold;
 }
 
@@ -124,6 +127,14 @@ body {
   margin-top: 34vh;
   text-align: left;
   z-index: 1;
+}
+#blog h3 {
+    font-family: "Montserrat", sans-serif; /* как у h1/h2 */
+    font-weight: 800;
+    font-size: 24px; /* подходящий размер для подзаголовка */
+    /* ИЗМЕНИТЕ ЭТУ СТРОКУ */
+    margin: 0 0 1vh 0; /* Убираем верхний отступ, чтобы h3 прилегал к .blog-section */
+    color: var(--text-color);
 }
 
 #background_overlay {
@@ -149,8 +160,9 @@ body {
 #blog-display h1 {
   font-size: 50px;
   color: var(--text-color);
-  font-weight: bold;
-  font-family: "Questrial", sans-serif;
+  /* --- MONTSERRAT ДЛЯ ЗАГОЛОВКОВ БЛОГА --- */
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
 }
 
 #blog-display h2 {
@@ -159,20 +171,28 @@ body {
 
 #blog-display {
   padding: 1vh 0px;
-  font-family: "Questrial", sans-serif;
+  /* --- INTER ДЛЯ БЛОКА ТЕКСТА --- */
+  font-family: "Inter", sans-serif; 
 }
 
 #blog p {
-  font-size: 17px;
-  line-height: 25px;
-  word-spacing: 1.2px;
-  margin: 5vh 0px;
+    font-size: 17px;
+    line-height: 25px;
+    word-spacing: 1.2px;
+    /* ИЗМЕНИТЕ ЭТУ СТРОКУ */
+    margin: 0 0 1vh 0; /* Убираем верхний отступ */
 }
 
 #blog p span {
   padding: 2px 4px;
   background: var(--text-color);
   color: var(--bg-color) !important;
+}
+.separator-line {
+    border: none;
+    height: 1px;
+    background-color: #ddd; /* Светло-серый цвет */
+    margin: 30px 0;
 }
 
 #blog img {
@@ -187,6 +207,77 @@ body {
   text-align: right;
   padding: 3vh 0px;
   position: absolute;
+}
+/* --- Стили для макета "Светлая цифра + линия" --- */
+
+.blog-section {
+    /* Flexbox для разделения на два столбца (цифра и текст) */
+    display: flex;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    gap: 100px; 
+    margin-bottom: 6vh; 
+    padding-top: 5px; 
+}
+
+.section-number {
+    /* Стили для БОЛЬШОЙ полупрозрачной цифры */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800; 
+    font-size: 100px; 
+    line-height: 1; 
+    
+    /* Светлый серый/розовый цвет с прозрачностью (как на скриншоте) */
+    color: rgba(170, 170, 170, 0.3); 
+    
+    flex-shrink: 0;
+    width: 60px; 
+    text-align: right; 
+}
+
+.text-content {
+    /* Контейнер для всего текста: Занимает остальное место */
+    flex-grow: 1; 
+    display: flex; 
+    flex-direction: column; /* h3 и p идут вертикально */
+}
+
+/* Стили для заголовка (h3) и линии */
+.text-content .section-heading {
+    margin: 0; 
+    padding-bottom: 5px; 
+    
+    /* Горизонтальная линия под заголовком */
+    border-bottom: 1px solid #eee; /* Очень светлая линия */
+    
+    font-weight: 700; 
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+/* Стили для параграфа (p) */
+.text-content .section-text {
+    margin-top: 15px; /* Отступ от линии */
+    font-size: 17px;
+    line-height: 25px;
+    word-spacing: 1.2px;
+}
+
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 800px) {
+    .blog-section {
+        gap: 60px;
+        margin-bottom: 4vh;
+    }
+    
+    .section-number {
+        font-size: 60px; 
+        width: 40px; 
+    }
+    
+    .text-content .section-heading {
+        font-size: 20px;
+    }
 }
 
 #header a {
@@ -205,7 +296,8 @@ body {
 #footer_blog a {
   color: var(--text-color) !important;
   text-decoration: none;
-  font-family: "Questrial", sans-serif;
+  /* --- INTER --- */
+  font-family: "Inter", sans-serif;
   font-weight: bold;
 }
 
@@ -218,7 +310,8 @@ body {
 #footer a {
   color: var(--text-color) !important;
   text-decoration: none;
-  font-family: "Questrial", sans-serif;
+  /* --- INTER --- */
+  font-family: "Inter", sans-serif;
   font-weight: bold;
 }
 
@@ -250,18 +343,21 @@ body {
 
 #userbio {
   font-size: 26px;
-  font-family: "Questrial", sans-serif;
+  /* --- MONTSERRAT ДЛЯ ВАЖНОГО ТЕКСТА --- */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 650; 
   width: 100%;
 }
 
 #about {
   font-size: 18px;
-  font-family: "Questrial", sans-serif;
+  /* --- INTER --- */
+  font-family: "Inter", sans-serif;
 }
 
 #about a,
 #username a {
-  color: #fff !important;
+  color: #000000 !important;
   text-decoration: none;
   font-weight: bold;
 }
@@ -333,9 +429,9 @@ body {
 
 .about_section {
   font-size: 18px;
-  font-family: "Questrial", sans-serif;
+  font-family: "Inter", sans-serif;
   margin: 2vh 0px;
-  font-weight: bold;
+  font-weight: 400;
   word-wrap: break-word;
 }
 
@@ -546,14 +642,14 @@ body {
   background: var(--text-color);
 }
 :root {
-  --bg-color: #fff;
-  --text-color: rgb(10, 10, 10);
+  --bg-color: #ffffff;
+  --text-color: rgb(0, 0, 0);
   --blog-gray-color: rgb(80, 80, 80);
   --background-image: linear-gradient(
       90deg,
-      rgba(10, 10, 10, 0.4),
-      rgb(10, 10, 10, 0.4)
+      rgb(255, 255, 255),
+      rgb(255, 255, 255)
     ),
-    url("https://i.pinimg.com/originals/08/78/f1/0878f164c5d43206af1c0a2f406efddc.gif");
+    url("");
   --background-background: #fff;
-}
+ } 
