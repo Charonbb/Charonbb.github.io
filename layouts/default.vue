@@ -1,45 +1,52 @@
 <template>
   <div>
-    <div class="flex justify-center px-4 pt-4 print:pt-0 print:px-0">
-      <NuxtLink to="/" class="text-2xl print:text-3xl"> Nurbek Baizakov</NuxtLink>
-    </div>
-    <div class="flex justify-center gap-2 print:hidden flex-wrap">
-      <NuxtLink to="/">
-        <Button
-          label="Home"
-          variant="link"
-          :class="route.path === '/' ? 'underline underline-offset-2' : ''"
-        />
-      </NuxtLink>
-      <NuxtLink to="/cv">
-        <Button
-          label="CV"
-          variant="link"
-          :class="route.path === '/cv' ? 'underline underline-offset-2' : ''"
-        />
-      </NuxtLink>
-      <NuxtLink to="/projects">
-        <Button
-          label="Projects"
-          variant="link"
-          :class="
-            route.path === '/projects' ? 'underline underline-offset-2' : ''
-          "
-        />
-      </NuxtLink>
-      <NuxtLink to="http://www.linkedin.com/in/nbaizaq" target="_blank">
-        <Button label="LinkedIn" variant="link" icon="pi pi-linkedin" />
-      </NuxtLink>
-      <NuxtLink to="https://github.com/nbaizaq" target="_blank">
-        <Button label="Github" variant="link" icon="pi pi-github" />
-      </NuxtLink>
-      <NuxtLink to="https://leetcode.com/u/nbaizakof" target="_blank">
-        <Button label="LeetCode" variant="link"
-          ><template #icon>
-            <img src="~/assets/img/leetcode.png" class="w-4 h-4" />
-          </template>
-        </Button>
-      </NuxtLink>
+    <div class="bg-primary-500 px-4 py-6 text-white print:hidden sticky top-0 z-10">
+      <div class="flex justify-center gap-4 font-bold flex-wrap text-2xl">
+        <NuxtLink
+          to="/"
+          class="link"
+          :class="route.path === '/' ? 'text-primary-500 bg-white' : ''"
+        >
+          Home
+        </NuxtLink>
+        <NuxtLink
+          to="/cv"
+          class="link"
+          :class="route.path === '/cv' ? 'text-primary-500 bg-white' : ''"
+        >
+          CV
+        </NuxtLink>
+        <NuxtLink
+          to="/projects"
+          class="link"
+          :class="route.path === '/projects' ? 'text-primary-500 bg-white' : ''"
+        >
+          Projects
+        </NuxtLink>
+      </div>
+      <div class="flex justify-center gap-2 flex-wrap mt-2 text-primary-50">
+        <NuxtLink
+          to="http://www.linkedin.com/in/nbaizaq"
+          target="_blank"
+          class="flex gap-1 items-center link"
+        >
+          <i class="pi pi-linkedin" />LinkedIn
+        </NuxtLink>
+        <NuxtLink
+          to="https://github.com/nbaizaq"
+          target="_blank"
+          class="flex gap-1 items-center link"
+        >
+          <i class="pi pi-github" />Github
+        </NuxtLink>
+        <NuxtLink
+          to="https://leetcode.com/u/nbaizakof"
+          target="_blank"
+          class="flex gap-1 items-center link"
+        >
+          <img src="~/assets/img/leetcode.png" class="w-4 h-4" />LeetCode
+        </NuxtLink>
+      </div>
     </div>
     <div class="px-4 pt-4 pb-8 print:p-0">
       <slot />

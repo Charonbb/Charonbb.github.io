@@ -125,18 +125,13 @@ export const professionalSummary = (() => {
 
 export const education: CvEducation = {
   start: new Date("2016-09-01"),
-  end: new Date("2019-12-01"),
+  end: new Date("2022-12-01"),
   university: "UNIST",
   location: "Ulsan, South Korea",
   degree: "Bachelor of Science",
   major: "Electrical Engineering",
   minor: "Computer Science and Engineering",
   // TODO: add GPA
-  // gpa: "4.0"
-  // TODO: add courses
-  // courses: [
-  //   "Optimization Theory",
-  // ],
   academicLeaves: [
     {
       start: new Date("2019-09-01"),

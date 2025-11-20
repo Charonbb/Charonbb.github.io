@@ -23,3 +23,11 @@ body {
 .container {
   @apply w-full md:w-3/4 md:mx-auto lg:w-1/2;
 }
+
+.link {
+  @apply focus:outline-solid focus:outline-2 focus:outline-primary-200 px-2;
+}
+
+*:focus {
+  @apply focus:outline-solid focus:outline-2 focus:outline-primary-200;
+}

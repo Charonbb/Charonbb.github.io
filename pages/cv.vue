@@ -1,21 +1,22 @@
 <template>
   <div class="container mx-auto">
-    <div>
-      <div class="font-medium text-center text-2xl">Frontend Engineer</div>
-      <div class="text-primary-600 font-medium uppercase text-lg text-center">
-        Ready to relocate!
-      </div>
-    </div>
     <ClientOnly>
-      <div class="flex justify-end print:hidden" v-if="supportsPrint">
-        <a href="/cv-data.json">
-          <Button variant="link" size="small" class="hover:underline"
-            >JSON</Button
-          >
+      <div class="flex justify-end gap-2 print:hidden" v-if="supportsPrint">
+        <a href="/cv-data.json" class="bg-primary-500 text-white px-2 py-1">
+          JSON
         </a>
-        <Button variant="text" size="small" @click="onPrint">Print</Button>
+        <button
+          class="bg-primary-500 text-white px-2 py-1 cursor-pointer hover:bg-primary-600"
+          @click="onPrint"
+        >
+          Print
+        </button>
       </div>
     </ClientOnly>
+    <div>
+      <div class="font-medium text-center text-4xl">Nurbek Baizakov</div>
+      <div class="font-medium text-center text-2xl mt-4">Frontend Engineer</div>
+    </div>
     <hr class="my-4 print:my-2 text-gray-400 border-dashed" />
     <div class="flex flex-col gap-8">
       <CvAddress />
@@ -75,9 +76,12 @@
             </div>
           </div>
           <div class="flex justify-center print:hidden" v-if="!showMoreAwards">
-            <Button variant="text" size="small" @click="onShowMoreAwards">
+            <button
+              @click="onShowMoreAwards"
+              class="flex items-center gap-1 bg-primary-500 text-white px-2 py-1 cursor-pointer hover:bg-primary-600"
+            >
               More <i class="pi pi-chevron-down"></i>
-            </Button>
+            </button>
           </div>
         </div>
       </CvBlock>
