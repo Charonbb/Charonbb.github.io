@@ -14,7 +14,7 @@
       </div>
     </ClientOnly>
     <div>
-      <div class="font-medium text-center text-4xl">Nurbek Baizakov</div>
+      <div class="hidden print:block font-medium text-center text-4xl">Nurbek Baizakov</div>
       <div class="font-medium text-center text-2xl mt-4">Frontend Engineer</div>
     </div>
     <hr class="my-4 print:my-2 text-gray-400 border-dashed" />

@@ -13,6 +13,10 @@
 <script setup lang="ts">
 import type { Project } from "~/utils/types";
 
+useHead({
+  title: "Projects",
+});
+
 const projects: Project[] = [
   {
     name: "Finite state machine",
