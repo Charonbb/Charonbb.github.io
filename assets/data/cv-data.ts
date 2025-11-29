@@ -4,6 +4,10 @@ import type {
   CvAward,
   EmploymentType,
 } from "~/utils/types";
+import {
+  CvTechnicalStackTypeMap,
+  CvTechnicalStackTypeOrder,
+} from "~/utils/types";
 
 // Utility function to calculate years between two dates
 function calculateYears(startDate: Date, endDate?: Date): number {
@@ -49,30 +53,6 @@ function calculateTotalExperienceYears(experiences: CvExperience[]): number {
 
 export const experiences: CvExperience[] = [
   {
-    id: "research-assistant-bmipl",
-    title: "Research Assistant Intern",
-    start: new Date("2018-09-01"),
-    end: new Date("2018-12-01"),
-    company: "BMIPL (UNIST)",
-    location: "Ulsan, South Korea",
-    responsibilities: [
-      "Conducted research on deep learning models and machine learning algorithms for cancer detection using computer vision techniques.",
-      "Implemented data preprocessing pipelines and feature engineering for medical imaging datasets.",
-    ],
-  },
-  {
-    id: "csharp-developer-megasoft",
-    title: "C# Developer",
-    start: new Date("2019-11-01"),
-    end: new Date("2020-02-01"),
-    company: 'LLC "Mega Soft"',
-    location: "Bishkek, Kyrgyzstan",
-    responsibilities: [
-      "Engineered and deployed machine learning models for token prediction (NLP) and an OCR system with advanced image processing to handle skewed and distorted text.",
-      "Architected and deployed the end-to-end web-based issue recognition system, including RESTful APIs, database integration, and model serving.",
-    ],
-  },
-  {
     id: "fullstack-php-crmtech",
     title: "Full-stack PHP Developer",
     start: new Date("2020-11-01"),
@@ -80,8 +60,43 @@ export const experiences: CvExperience[] = [
     company: 'LLC "CRM Technologies"',
     location: "Bishkek, Kyrgyzstan",
     responsibilities: [
-      "Architected and deployed custom CRM solutions, leveraging microservices and RESTful APIs to facilitate scalable enterprise data exchange.",
-      "Engineered custom CRM solutions for enterprise clients, implementing RESTful APIs and a microservices architecture to ensure seamless, scalable data exchange.",
+      "Engineered custom CRM solutions for enterprise clients, implementing RESTful APIs to ensure seamless, scalable data exchange by reducing time to market by couple of months.",
+      "Conceptualized, developed, and deployed a dynamic mapping tool using Canvas, improving client efficiency by reducing time spent on manual data entry and mapping.",
+    ],
+    technicalStack: [
+      {
+        type: "frontend",
+        technologies: ["jQuery", "Bootstrap", "PHP", "CSS", "HTML"],
+      },
+      {
+        type: "backend",
+        technologies: ["PHP", "REST", "REST"],
+      },
+    ],
+  },
+  {
+    id: "fullstack-php-ask-ai",
+    title: "Full Stack PHP Developer",
+    start: new Date("2021-07-01"),
+    end: new Date("2021-11-01"),
+    company: 'LLC "Ask consulting"',
+    responsibilities: [
+      "Developed an innovative online learning platform leveraging AI/ML algorithms for evaluation of human-produced data and personalized learning experiences.",
+      "Researched and implemented a novel method for generating synthetic English words using NLP techniques to eliminating manual work.",
+    ],
+    technicalStack: [
+      {
+        type: "frontend",
+        technologies: ["Vue.js", "TailwindCSS"],
+      },
+      {
+        type: "backend",
+        technologies: ["PHP", "Laravel", "REST"],
+      },
+      {
+        type: "devops",
+        technologies: ["Linux", "Nginx", "Docker", "Gitlab CI/CD"],
+      },
     ],
   },
   {
@@ -92,11 +107,29 @@ export const experiences: CvExperience[] = [
     company: 'LLC "Tumarsoft"',
     location: "Bishkek, Kyrgyzstan",
     responsibilities: [
-      "Led Agile development of complex FinTech solutions, driving timely delivery and system stability through technical oversight (code reviews) and mentorship/hiring.",
-      "Defined strategic roadmap and technical architecture, while simultaneously designing and implementing the company-wide Design System and UI kit",
-      "Delivered robust, scalable solutions featuring advanced error handling/monitoring, while concurrently creating a full-stack demo for rapid innovation and prototyping.",
+      "Delivered robust and scalable solutions using Vue.js, integrating advanced error handling and monitoring systems to enhance stability using Sentry, while concurrently building a full-stack demo environment that accelerated time to market by several months.",
+      "Established team workflow and processes, including code reviews, pair programming, and knowledge sharing, which resulted in a more efficient and collaborative development environment.",
     ],
-    pageBreak: true,
+    technicalStack: [
+      {
+        type: "frontend",
+        technologies: [
+          "Vue.js",
+          "Webpack",
+          "Vuetify",
+          "WebRTC",
+          "PWA(Service workers)",
+        ],
+      },
+      {
+        type: "backend",
+        technologies: ["Node.js", "Express", "REST", "GraphQL", "gRPC"],
+      },
+      {
+        type: "devops",
+        technologies: ["Docker", "Gitlab CI/CD"],
+      },
+    ],
   },
   {
     id: "team-lead-frontend-ogogo",
@@ -106,9 +139,24 @@ export const experiences: CvExperience[] = [
     company: 'LLC "OGOGO"',
     location: "Bishkek, Kyrgyzstan",
     responsibilities: [
-      "Led end-to-end Agile development for FinTech innovations, managing the product lifecycle from ideation to launch with cross-functional team alignment.",
-      "Drove strategic product vision by conceiving and implementing the company-wide Design System and UI component library.",
-      "Engineered high-quality frontend solutions using modern frameworks, with built-in comprehensive testing and monitoring to sustain performance and stability.",
+      "Led end-to-end Agile development for FinTech innovations, managing the product lifecycle from ideation to launch, which resulted in the successful deployment of 3 products and improved cross-functional team alignment across all releases.",
+      "Drove strategic product vision by conceiving and implementing a company-wide Design System and UI component library, which resulted in faster development, feature delivery, and standardized user experience.",
+    ],
+    technicalStack: [
+      {
+        type: "frontend",
+        technologies: [
+          "JavaScript(TypeScript)",
+          "React.js",
+          "Next.js",
+          "Nuxt.js",
+          "Vite",
+        ],
+      },
+      {
+        type: "devops",
+        technologies: ["Docker", "Gitlab CI/CD", "Github Actions"],
+      },
     ],
   },
 ];
@@ -116,8 +164,9 @@ experiences.sort(
   (a, b) => new Date(b.start).getTime() - new Date(a.start).getTime()
 );
 
+export const totalYears = calculateTotalExperienceYears(experiences);
+
 export const professionalSummary = (() => {
-  const totalYears = calculateTotalExperienceYears(experiences);
   return `Senior Frontend Engineer with ~${Math.ceil(
     totalYears
   )} years delivering scalable web and fintech applications. Core focus on frameworks(Vue.js, React.js) with SSR, SPA approaches, CI/CD, microservices architecture, and design systems. Proven leader in Agile environments.`;
@@ -197,35 +246,53 @@ export const languages: string[] = [
   "Kyrgyz(Native)",
 ];
 
-export const skills: string[] = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "TypeScript",
-  "CSS Grid",
-  "SASS(LESS)",
-  "React",
-  "Vue.js",
-  "Next.js",
-  "Nuxt.js",
-  "SPA(SSR)",
-  "Redux(RTK, RTK Query)",
-  "Redux Toolkit",
-  "Webpack",
-  "Vite",
-  "RESTful APIs",
-  "GraphQL",
-  "Microservices",
-  "Jest",
-  "Vitest",
-  "Cypress",
-  "Playwright",
-  "Unit Testing",
-  "E2E Testing",
-  "Lighthouse",
-  "Web Vitals",
-  "Performance Optimization",
-  "CI/CD",
-  "Agile",
-  "Scrum",
-];
+function getSkills(experiences: CvExperience[]) {
+  const MAX_TECHNOLOGY_COUNT = 10;
+  const allSkills = experiences
+    .flatMap((experience) => experience.technicalStack || [])
+    .filter(Boolean);
+
+  const groupedSkills = allSkills.reduce((acc, current) => {
+    if (!acc[current.type]) {
+      acc[current.type] = {
+        name: CvTechnicalStackTypeMap[current.type],
+        technologies: [],
+      };
+    }
+    acc[current.type].technologies.push(...current.technologies);
+    return acc;
+  }, {} as Record<CvTechnicalStack["type"], { name: string; technologies: string[] }>);
+
+  Object.keys(groupedSkills).forEach((key) => {
+    const frequencyMap = new Map<string, number>();
+    groupedSkills[key as CvTechnicalStack["type"]].technologies.forEach(
+      (technology) => {
+        frequencyMap.set(technology, (frequencyMap.get(technology) || 0) + 1);
+      }
+    );
+    const mostFrequentTechnology = Array.from(frequencyMap.entries());
+    mostFrequentTechnology.sort((a, b) => b[1] - a[1]);
+    groupedSkills[key as CvTechnicalStack["type"]].technologies =
+      mostFrequentTechnology
+        .map(([technology]) => technology)
+        .slice(0, MAX_TECHNOLOGY_COUNT);
+  });
+
+  const _groupedSkills = Object.entries(groupedSkills);
+  _groupedSkills.sort((a, b) => {
+    return (
+      CvTechnicalStackTypeOrder.indexOf(a[0] as CvTechnicalStack["type"]) -
+      CvTechnicalStackTypeOrder.indexOf(b[0] as CvTechnicalStack["type"])
+    );
+  });
+
+  return _groupedSkills.reduce((acc, [key, value]) => {
+    acc[key as CvTechnicalStack["type"]] = value;
+    return acc;
+  }, {} as Record<CvTechnicalStack["type"], { name: string; technologies: string[] }>);
+}
+
+export const skills: Record<
+  CvTechnicalStack["type"],
+  { name: string; technologies: string[] }
+> = getSkills(experiences);

@@ -13,18 +13,26 @@
         </button>
       </div>
     </ClientOnly>
-    <div>
-      <div class="hidden print:block font-medium text-center text-4xl">Nurbek Baizakov</div>
-      <div class="font-medium text-center text-2xl mt-4">Frontend Engineer</div>
+    <div class="flex items-baseline justify-between">
+      <div class="font-medium text-4xl">Nurbek Baizakov</div>
+      <div class="font-medium text-2xl">Senior Frontend Engineer</div>
     </div>
-    <hr class="my-4 print:my-2 text-gray-400 border-dashed" />
-    <div class="flex flex-col gap-8">
+    <hr class="my-2 print:my-1 text-gray-400" />
+    <div class="flex flex-col gap-6 print:gap-2">
       <CvAddress />
       <CvBlock title="Summary" class="leading-6 text-sm text-gray-800">
         {{ professionalSummary }}
       </CvBlock>
+      <CvBlock title="Skills">
+        <div class="text-sm space-y-1">
+          <div v-for="(value, key) in skills" :key="key">
+            <span class="mr-2 font-bold">{{ value.name }}:</span>
+            <span>{{ value.technologies.join(", ") }}</span>
+          </div>
+        </div>
+      </CvBlock>
       <CvBlock title="Experience">
-        <div class="flex flex-col">
+        <div class="flex flex-col gap-2 print:gap-1">
           <CvExperienceItem
             v-for="experience in experiences"
             :key="experience.title"
@@ -34,18 +42,6 @@
       </CvBlock>
       <CvBlock title="Education">
         <CvEducation :education="education" />
-      </CvBlock>
-      <CvBlock title="Skills">
-        <div class="space-y-2">
-          <div class="inline text-sm">
-            <span class="mr-2 font-bold">Languages:</span>
-            <span>{{ languages.join(", ") }}</span>
-          </div>
-          <div class="inline-block mt-2 text-sm">
-            <span class="mr-2 font-bold">Technical:</span>
-            <span>{{ skills.join(", ") }}</span>
-          </div>
-        </div>
       </CvBlock>
       <CvBlock title="Awards" class="print:hidden">
         <div class="flex flex-col gap-4">
@@ -95,7 +91,6 @@ import {
   experiences,
   education,
   awards,
-  languages,
   skills,
 } from "~/assets/data/cv-data";
 

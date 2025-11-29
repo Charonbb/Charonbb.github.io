@@ -33,6 +33,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       baseUrl: "https://nbaizaq.xyz",
+      email: "n.baizakof@gmail.com",
     },
   },
   vite: {

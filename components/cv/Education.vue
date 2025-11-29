@@ -1,20 +1,25 @@
 <template>
   <div>
-    <div class="text-gray-500 text-sm">
-      {{ period }}
+    <div class="flex items-center gap-2 justify-between">
+      <div class="text-xl">
+        {{ props.education.degree }} at {{ props.education.university }}
+      </div>
+      <div class="text-gray-500 text-sm">
+        {{ period }}
+      </div>
     </div>
-    <div class="text-xl my-1">{{ props.education.degree }}</div>
     <div class="text-sm">
       {{ props.education.major }}
-      <span v-if="props.education.major" class="text-gray-500 text-xs">(Major)</span>,
+      <span v-if="props.education.major" class="text-gray-500 text-xs"
+        >(Major)</span
+      >,
       {{ props.education.minor }}
-      <span v-if="props.education.minor" class="text-gray-500 text-xs">(Minor)</span>
+      <span v-if="props.education.minor" class="text-gray-500 text-xs"
+        >(Minor)</span
+      >
     </div>
-    <div class="text-sm mt-1 text-gray-500">
-      <div>
-        {{ props.education.university }},
-        {{ props.education.location }}
-      </div>
+    <div class="text-sm text-gray-500">
+      {{ props.education.location }}
     </div>
 
     <div class="mt-4" v-if="props.education.gpa">

@@ -9,7 +9,32 @@ export interface CvExperience {
   responsibilities: string[];
   website?: string;
   pageBreak?: boolean;
+  technicalStack?: CvTechnicalStack[];
 }
+
+export interface CvTechnicalStack {
+  type: "frontend" | "backend" | "database" | "devops" | "other" | "api";
+  technologies: string[];
+}
+
+export const CvTechnicalStackTypeMap: Record<CvTechnicalStack["type"], string> =
+  {
+    frontend: "Frontend",
+    backend: "Backend",
+    database: "Database",
+    devops: "DevOps",
+    other: "Other",
+    api: "API",
+  };
+
+export const CvTechnicalStackTypeOrder: CvTechnicalStack["type"][] = [
+  "frontend",
+  "backend",
+  "database",
+  "devops",
+  "api",
+  "other",
+];
 
 export interface CvEducation {
   start: Date;

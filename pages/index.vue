@@ -1,6 +1,8 @@
 <template>
   <div class="container space-y-4">
-    <div class="text-3xl my-8 text-center text-balance sm:text-left sm:text-nowrap">
+    <div
+      class="text-3xl my-8 text-center text-balance sm:text-left sm:text-nowrap"
+    >
       Hi! I'm <span class="text-primary-500">Nurbek Baizakov</span>, a frontend
       engineer.
     </div>
@@ -24,7 +26,13 @@
       through non-trivial solutions.
     </p>
     <p class="text-xl leading-relaxed">
-      Interested in working together? Feel free to reach out to me.
+      Interested in working together? <br />
+      Feel free to reach out to
+      <a
+        :href="`mailto:${useRuntimeConfig().public.email}`"
+        class="text-primary-500 hover:text-primary-700"
+        >me</a
+      >.
     </p>
   </div>
 </template>
