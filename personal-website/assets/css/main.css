@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --text-xxs: 0.5rem;
+
+  --color-primary-50: #f6f9fd;
+  --color-primary-100: #d5e1f4;
+  --color-primary-200: #000000;
+  --color-primary-300: #93b2e3;
+  --color-primary-400: #729adb;
+  --color-primary-500: #000000;
+  --color-primary-600: #000000;
+  --color-primary-700: #395b93;
+  --color-primary-800: #2d4874;
+  --color-primary-900: #203454;
+  --color-primary-950: #142135;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  @apply w-full md:w-3/4 md:mx-auto lg:w-1/2;
+}
+
+.link {
+  @apply focus:outline-solid focus:outline-2 focus:outline-primary-200 px-2;
+}
+
+*:focus {
+  @apply focus:outline-solid focus:outline-2 focus:outline-primary-200;
+}
