@@ -12,6 +12,8 @@ export default defineNuxtConfig({
     },
   },
   app: {
+    // Добавляем эту строку, чтобы Nuxt искал стили в корне домена
+    baseURL: '/', 
     head: {
       link: [
         {
