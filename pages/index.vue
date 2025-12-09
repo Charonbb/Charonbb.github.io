@@ -16,7 +16,8 @@
       months. My journey into IT started with learning the basics of HTML and CSS, but I quickly pivoted to testing, where I actively use Python and Selenium in PyCharm .
       <NuxtLink to="/cv" class="text-primary-500 hover:text-primary-700"
         >CV page</NuxtLink
-      >.
+      >
+      .
     </p>
     <p class="text-xl leading-relaxed">
       My main focus is on effective communication within the team to achieve a high-quality outcome. My immediate goals include mastering databases and advancing my skills in QA automation.
@@ -25,10 +26,11 @@
       Interested in working together? <br />
       Feel free to reach out to
       <a
-        :href="`mailto:${useRuntimeConfig().public.email}`"
-        class="text-primary-500 hover:text-primary-700"
-        >me</a
-      >.
+  :href="`mailto:${useRuntimeConfig().public.email}`"
+  class="text-primary-500 hover:text-primary-700 link" 
+  >me</a
+>
+      .
     </p>
   </div>
 </template>
