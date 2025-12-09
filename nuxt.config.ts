@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      baseUrl: "/",
+      baseUrl: "https://bayel",
       email: "b.toktosunof@gmail.com",
     },
   },
