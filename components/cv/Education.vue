@@ -8,19 +8,18 @@
         {{ period }}
       </div>
     </div>
-    <div class="text-sm">
-      {{ props.education.major }}
-      <span v-if="props.education.major" class="text-gray-500 text-xs"
-        >(Major)</span
-      >,
-      {{ props.education.minor }}
-      <span v-if="props.education.minor" class="text-gray-500 text-xs"
-        >(Minor)</span
-      >
-    </div>
-    <div class="text-sm text-gray-500">
-      {{ props.education.location }}
-    </div>
+   <div class="text-sm">
+  <span v-if="props.education.major">
+    {{ props.education.major }}
+    <span class="text-gray-500 text-xs">(Major)</span>
+  </span>
+  <span v-if="props.education.minor">
+    <template v-if="props.education.major">, </template>
+    {{ props.education.minor }}
+    <span class="text-gray-500 text-xs">(Minor)</span>
+  </span>
+</div>
+
 
     <div class="mt-4" v-if="props.education.gpa">
       GPA: <span class="italic">{{ props.education.gpa }}</span>
