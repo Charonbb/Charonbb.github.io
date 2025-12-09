@@ -46,12 +46,7 @@
   <CvEducation :education="education" />
 </CvBlock>
 
-<!-- Languages -->
-<CvBlock title="Languages">
-  <div class="text-sm">
-    {{ languages.join(" , ") }}
-  </div>
-</CvBlock>
+
 
 <CvBlock title="Awards" class="print:hidden" v-if="awards.length > 0">
   <div class="flex flex-col gap-4">
