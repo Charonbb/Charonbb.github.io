@@ -76,7 +76,7 @@ export const experiences: CvExperience[] = [
         technologies: ["Jira", "Postman", "Swagger", "Selenium", "Python"],
       },
       {
-        type: "testing_types",
+        type: "Testing tools",
         technologies: [
           "Smoke Testing",
           "Regression Testing",
