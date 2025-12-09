@@ -12,6 +12,8 @@ export default defineNuxtConfig({
     },
   },
   app: {
+    // Добавляем эту строку, чтобы Nuxt искал стили в корне домена
+    baseURL: '/', 
     head: {
       link: [
         {
@@ -32,7 +34,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      baseUrl: "https://b.toktosunov.xyz",
+      baseUrl: "/",
       email: "b.toktosunof@gmail.com",
     },
   },
