@@ -115,7 +115,7 @@ export const education: CvEducation = {
   end: "2025-05-01",
   university: "Bishkek Universal College",
   location: "Bishkek, Kyrgyzstan",
-  degree: "Diploma o",
+  degree: "Diploma from ",
   major: "Computer Programmer"
 };
 
@@ -139,49 +139,57 @@ export const languages: string[] = [
 // ----------------------
 // SKILLS LOGIC
 // ----------------------
-function getSkills(experiences: CvExperience[]) {
-  const MAX_TECHNOLOGY_COUNT = 10;
-  const allSkills = experiences
-    .flatMap((experience) => experience.technicalStack || [])
-    .filter(Boolean);
+function getSkills(experiences: CvExperience[], languages: string[]) { // 1. ДОБАВЛЕН languages как аргумент
+ const MAX_TECHNOLOGY_COUNT = 10;
+ const allSkills = experiences
+ .flatMap((experience) => experience.technicalStack || [])
+ .filter(Boolean);
 
-  const groupedSkills = allSkills.reduce((acc, current) => {
-    if (!acc[current.type]) {
-      acc[current.type] = {
-        name: CvTechnicalStackTypeMap[current.type] || current.type,
-        technologies: [],
-      };
-    }
-    acc[current.type].technologies.push(...current.technologies);
-    return acc;
-  }, {} as Record<string, { name: string; technologies: string[] }>);
-
-  Object.keys(groupedSkills).forEach((key) => {
-    const frequencyMap = new Map<string, number>();
-    groupedSkills[key].technologies.forEach((technology) => {
-      frequencyMap.set(technology, (frequencyMap.get(technology) || 0) + 1);
-    });
-
-    const mostFrequentTechnology = Array.from(frequencyMap.entries());
-    mostFrequentTechnology.sort((a, b) => b[1] - a[1]);
-
-    groupedSkills[key].technologies = mostFrequentTechnology
-      .map(([technology]) => technology)
-      .slice(0, MAX_TECHNOLOGY_COUNT);
-  });
-
-  const _groupedSkills = Object.entries(groupedSkills);
-  _groupedSkills.sort((a, b) => {
-    return (
-      CvTechnicalStackTypeOrder.indexOf(a[0] as any) -
-      CvTechnicalStackTypeOrder.indexOf(b[0] as any)
-    );
-  });
-
-  return _groupedSkills.reduce((acc, [key, value]) => {
-    acc[key as keyof typeof CvTechnicalStackTypeMap] = value;
-    return acc;
-  }, {} as Record<string, { name: string; technologies: string[] }>);
+ const groupedSkills = allSkills.reduce((acc, current) => {
+ if (!acc[current.type]) {
+ acc[current.type] = {
+ name: CvTechnicalStackTypeMap[current.type] || current.type,
+ technologies: [],
+ };
 }
+ acc[current.type].technologies.push(...current.technologies);
+ return acc;
+}, {} as Record<string, { name: string; technologies: string[] }>);
 
-export const skills = getSkills(experiences);
+ // 2. ДОБАВЛЕНИЕ СЕКЦИИ ЯЗЫКОВ
+ groupedSkills["languages"] = {
+ name: "Languages",
+ technologies: languages,
+ };
+// ---------------------------
+ Object.keys(groupedSkills).forEach((key) => {
+    // 3. ИСКЛЮЧЕНИЕ ЯЗЫКОВ из логики подсчета частоты/среза
+    if (key === "languages") return; 
+
+const frequencyMap = new Map<string, number>();
+groupedSkills[key].technologies.forEach((technology) => {
+ frequencyMap.set(technology, (frequencyMap.get(technology) || 0) + 1);
+ });
+
+const mostFrequentTechnology = Array.from(frequencyMap.entries());
+mostFrequentTechnology.sort((a, b) => b[1] - a[1]);
+
+groupedSkills[key].technologies = mostFrequentTechnology
+.map(([technology]) => technology)
+.slice(0, MAX_TECHNOLOGY_COUNT);
+ });
+
+ const _groupedSkills = Object.entries(groupedSkills);
+_groupedSkills.sort((a, b) => {
+return (
+ CvTechnicalStackTypeOrder.indexOf(a[0] as any) -
+ CvTechnicalStackTypeOrder.indexOf(b[0] as any)
+ );
+});
+
+return _groupedSkills.reduce((acc, [key, value]) => {
+ acc[key as keyof typeof CvTechnicalStackTypeMap] = value;
+ return acc;
+ }, {} as Record<string, { name: string; technologies: string[] }>);
+}
+export const skills = getSkills(experiences, languages); // 4. ИЗМЕНЕНО: Добавлен languages

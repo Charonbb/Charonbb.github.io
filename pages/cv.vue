@@ -24,7 +24,14 @@
 <CvBlock title="Summary" class="leading-6 text-sm text-gray-800">
   {{ professionalSummary }}
 </CvBlock>
-
+<CvBlock title="Skills">
+  <div class="text-sm space-y-1">
+    <div v-for="(value, key) in skills" :key="key">
+      <span class="mr-2 font-bold">{{ value.name }}:</span>
+      <span>{{ value.technologies.join(", ") }}</span>
+    </div>
+  </div>
+</CvBlock>
 <CvBlock title="Experience">
   <div class="flex flex-col gap-2 print:gap-1">
     <CvExperienceItem
@@ -86,14 +93,7 @@
     </div>
   </div>
 </CvBlock>
-<CvBlock title="Skills">
-  <div class="text-sm space-y-1">
-    <div v-for="(value, key) in skills" :key="key">
-      <span class="mr-2 font-bold">{{ value.name }}:</span>
-      <span>{{ value.technologies.join(", ") }}</span>
-    </div>
-  </div>
-</CvBlock>
+
 
     </div>
   </div>

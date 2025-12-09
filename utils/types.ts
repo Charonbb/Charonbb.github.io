@@ -14,38 +14,44 @@ export interface CvExperience {
 }
 
 export interface CvTechnicalStack {
-  type:
-    | "frontend"
-    | "backend"
-    | "database"
-    | "devops"
-    | "other"
-    | "api"
-    | "tools"
-    | "testing_types";
-  technologies: string[];
+ type:
+ | "frontend"
+ | "backend"
+ | "database"
+ | "devops"
+ | "other"
+ | "api"
+ | "tools"
+ | "testing_types"
+ | "languages"
+| "Testing tools"; // <-- ИЗМЕНЕНИЕ 1: Добавлен новый тип
+ technologies: string[];
 }
 
 export const CvTechnicalStackTypeMap: Record<CvTechnicalStack["type"], string> = {
-  frontend: "Frontend",
-  backend: "Backend",
-  database: "Database",
-  devops: "DevOps",
-  other: "Other",
-  api: "API",
-  tools: "Tools",
-  testing_types: "Testing Types",
+ frontend: "Frontend",
+ backend: "Backend",
+ database: "Database",
+ devops: "DevOps",
+ other: "Other",
+ api: "API",
+ tools: "Tools",
+ testing_types: "Testing Types",
+languages: "Languages",
+ Testing_tools: "Testing tools", // <-- ИЗМЕНЕНИЕ 2: Добавлено отображаемое имя
 };
 
 export const CvTechnicalStackTypeOrder: CvTechnicalStack["type"][] = [
-  "frontend",
-  "backend",
-  "database",
-  "devops",
-  "api",
-  "tools",
-  "testing_types",
-  "other",
+"frontend",
+"backend",
+"database",
+"devops",
+"api",
+"tools",
+"Testing tools", // <-- ИЗМЕНЕНИЕ 3: Добавлено сюда, чтобы оно шло после "tools"
+"testing_types", 
+"other",
+"languages", 
 ];
 
 export interface CvEducation {
