@@ -6,7 +6,7 @@
       Hi! I'm <span class="text-primary-500">Bayel Toktosunov</span>, a QA engineer.
     </div>
     <div>
-      <img src="~/assets/img/home-me.jpeg" />
+      <img src="" />
     </div>
     <p class="text-xl leading-relaxed">
       I have been working as a Quality Assurance (QA) Specialist for the past
