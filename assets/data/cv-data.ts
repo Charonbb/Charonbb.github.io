@@ -117,7 +117,7 @@ export const education: CvEducation = {
   location: "Bishkek, Kyrgyzstan",
   degree: "Diploma o",
   major: "Computer Programmer",
-  minor: "",
+
   academicLeaves: [],
 };
 
