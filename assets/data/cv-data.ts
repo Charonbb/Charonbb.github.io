@@ -58,40 +58,45 @@ function calculateTotalExperienceYears(experiences: CvExperience[]): number {
 // EXPERIENCES
 // ----------------------
 export const experiences: CvExperience[] = [
-  {
-    id: "junior-qa-ogogo",
-    title: "Junior QA Specialist",
-    start: "July 2025",              
-    end: "Present",                 
-    company: 'LLC "OGOGO"',
-    location: "Bishkek, Kyrgyzstan",
-    responsibilities: [
-      "Conducted thorough smoke and regression testing, contributing to the identification and reporting of an average of 4-7 critical bugs per cycle.",
-      "Executed end-to-end testing primarily focused on key user scenarios within AI-driven features.",
-      "Maintained and updated QA documentation, ensuring clarity and accuracy across test cases and reports.",
-    ],
-    technicalStack: [
-      {
-        type: "tools",
-        technologies: ["Jira", "Postman", "Swagger", "Selenium", "Python"],
-      },
-      {
-        type: "Testing tools",
-        technologies: [
-          "Smoke Testing",
-          "Regression Testing",
-          "Functional Testing",
-          "Ad-hoc Testing",
-          "Acceptance Testing",
-          "System Testing",
-          "API Testing",
-          "Manual Testing (iOS, Android, Web)",
-          "Black Box Testing",
-          "Gray Box Testing (API)",
-        ],
-      },
-    ],
-  },
+ {
+ id: "junior-qa-ogogo",
+ title: "Junior QA Specialist",
+ start: "July 2025", 
+ end: "Present", 
+ company: 'LLC "OGOGO"',
+ location: "Bishkek, Kyrgyzstan",
+ responsibilities: [
+ "Conducted comprehensive smoke, regression, and functional testing, identifying and documenting 4–7 high-priority defects per release cycle.",
+ "Executed end-to-end testing of core AI-driven product features, covering key user flows across Web, iOS, and Android platforms.",
+ "Created, maintained, and refined QA documentation (test cases, bug reports, checklists), improving clarity and reproducibility for the QA team.",
+ ],
+ technicalStack: [
+ {
+ type: "tools",
+ technologies: ["Jira", "Postman", "Swagger", "Selenium", "Python"],
+ },
+ {
+ type: "Testing tools",
+ technologies: [
+ "Smoke Testing",
+"Regression Testing",
+"Functional Testing",
+ "Ad-hoc Testing",
+ "Acceptance Testing",
+ "System Testing",
+ "API Testing",
+ "Manual Testing (iOS, Android, Web)", // Этот элемент можно удалить, если вы хотите, чтобы платформы отображались ТОЛЬКО в новой секции
+ "Black Box Testing",
+ "Gray Box Testing (API)",
+ ],
+ },
+      // !!! НОВЫЙ БЛОК ДЛЯ ПЛАТФОРМ !!!
+ {
+ type: "platforms",
+ technologies: ["Android", "iOS", "Web"],
+ },
+ ],
+ },
 ];
 
 experiences.sort(
@@ -104,7 +109,7 @@ export const totalYears = calculateTotalExperienceYears(experiences);
 // SUMMARY
 // ----------------------
 export const professionalSummary = (() => {
-  return `Junior Quality Assurance (QA) Specialist with 6 months of hands-on experience in functional, smoke, and regression testing. Proficient with modern QA tools like Jira, Postman, and Swagger. Eager to advance in test automation using Python and Selenium, focused on ensuring high-quality product delivery in Agile environments.`;
+  return `Junior Quality Assurance (QA) Specialist with 6 months of practical experience in functional, smoke, and regression testing. Proficient in using modern QA tools such as Jira, Postman, and Swagger. Motivated to advance in test automation with Python and Selenium, with a strong focus on delivering high-quality, reliable products in Agile environments.`;
 })();
 
 // ----------------------
@@ -131,9 +136,9 @@ awards.sort((a, b) => {
 // LANGUAGES
 // ----------------------
 export const languages: string[] = [
-  "English (secondary)",
-  "Russian (fluent)",
-  "Kyrgyz (native)",
+  "English (B1)",
+  "Russian (C1)",
+  "Kyrgyz (С1)",
 ];
 
 // ----------------------
