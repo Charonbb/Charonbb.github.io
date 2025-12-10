@@ -61,7 +61,7 @@ export const experiences: CvExperience[] = [
  {
  id: "junior-qa-ogogo",
  title: "Junior QA Specialist",
- start: "July 2025", 
+ start: "2025-07-01", 
  end: "Present", 
  company: 'LLC "OGOGO"',
  location: "Bishkek, Kyrgyzstan",
