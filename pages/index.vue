@@ -10,10 +10,8 @@
     </div>
     <p class="text-xl leading-relaxed">
       I have been working as a Quality Assurance (QA) Specialist for the past
-      <span class="text-primary-500">{{
-        currentYear - startYearOfWorking
-      }}</span>
-      months. My journey into IT started with learning the basics of HTML and CSS, but I quickly pivoted to testing, where I actively use Python and Selenium in PyCharm .
+      <span class="text-primary-500">{{ totalExperienceMonths }}</span>
+      months. My journey into IT started with learning the basics of HTML and CSS, but I quickly pivoted to testing, where I actively use Python and Selenium in PyCharm.
       <NuxtLink to="/cv" class="text-primary-500 hover:text-primary-700"
         >CV page</NuxtLink
       >
@@ -26,16 +24,24 @@
       Interested in working together? <br />
       Feel free to reach out to
       <a
-  :href="`mailto:${useRuntimeConfig().public.email}`"
-  class="text-primary-500 hover:text-primary-700 link" 
-  >me</a
->
+        :href="`mailto:${useRuntimeConfig().public.email}`"
+        class="text-primary-500 hover:text-primary-700 link"
+        >me</a
+      >
       .
     </p>
   </div>
 </template>
 
 <script lang="ts" setup>
-const startYearOfWorking = 2019;
-const currentYear = new Date().getFullYear();
+import { computed } from 'vue'; 
+// !!! ИМПОРТИРУЕМ totalMonths, которое мы только что создали !!!
+import { totalMonths } from "~/assets/data/cv-data"; 
+
+// Теперь нам не нужно вычислять, мы просто берем готовое значение
+const totalExperienceMonths = computed(() => {
+    return totalMonths; 
+});
+
+// ...
 </script>
