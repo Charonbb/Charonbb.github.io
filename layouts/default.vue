@@ -24,7 +24,7 @@
           target="_blank"
           class="flex gap-1 items-center link"
         >
-          <i class="pi pi-linkedin" />LinkedIn
+          <i class="pi pi-linkedin" />LinkedInfff
         </NuxtLink>
         <NuxtLink
           to="https://github.com/Charonbb"
