@@ -57,12 +57,12 @@ export const CvTechnicalStackTypeOrder: CvTechnicalStack["type"][] = [
 "platforms",
 "languages", 
 ];
+
 export interface Project {
   name: string;
   description: string;
-  github?: string;
-  npm?: string;
-  technologies?: string[];
   author?: string[];
-  bookUrl?: string; // <-- ДОБАВЬТЕ ЭТО
+  finishedDate?: string; // Дата прочтения
+  tags?: string[];       // Хештеги (qa, личное развитие и т.д.)
+  bookUrl?: string;
 }

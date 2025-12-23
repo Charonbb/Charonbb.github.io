@@ -16,13 +16,13 @@
         >
           CV
         </NuxtLink>
-       <NuxtLink
-              to="/books"
-            class="link"
-        :class="route.path === '/books' ? 'text-primary-500 bg-white' : ''"
+   <NuxtLink
+  to="/activities"
+  class="link"
+  :class="route.path === '/activities' ? 'text-primary-500 bg-white' : ''"
 >
-        Books
-      </NuxtLink>
+  Activities
+</NuxtLink>
       </div>
       <div class="flex justify-center gap-2 flex-wrap mt-2 text-primary-50">
         <NuxtLink
@@ -30,7 +30,7 @@
           target="_blank"
           class="flex gap-1 items-center link"
         >
-          <i class="pi pi-linkedin" />LinkedInfff
+          <i class="pi pi-linkedin" />LinkedIn
         </NuxtLink>
         <NuxtLink
           to="https://github.com/Charonbb"

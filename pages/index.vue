@@ -11,14 +11,14 @@
     <p class="text-xl leading-relaxed">
       I have been working as a Quality Assurance (QA) Specialist for the past
       <span class="text-primary-500">{{ totalExperienceMonths }}</span>
-      months. My journey into IT started with learning the basics of HTML and CSS, but I quickly pivoted to testing, where I actively use Python and Selenium in PyCharm.
+      months. My journey into IT started with learning the basics of HTML and CSS, but I quickly pivoted to testing, where I actively use Python and Selenium in PyCharm.You can find my CV on the
       <NuxtLink to="/cv" class="text-primary-500 hover:text-primary-700"
         >CV page</NuxtLink
       >
       .
     </p>
     <p class="text-xl leading-relaxed">
-      My main focus is on effective communication within the team to achieve a high-quality outcome. My immediate goals include mastering databases and advancing my skills in QA automation.
+   My primary focus is on creating user-centered products and experiences by delivering high-quality solutions through rigorous quality assurance. I enjoy working on projects that positively impact people’s lives and continuously improve my skills in databases and QA automation.
     </p>
     <p class="text-xl leading-relaxed">
       Interested in working together? <br />
