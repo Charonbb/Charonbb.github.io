@@ -16,7 +16,13 @@
         >
           CV
         </NuxtLink>
-       
+       <NuxtLink
+              to="/books"
+            class="link"
+        :class="route.path === '/books' ? 'text-primary-500 bg-white' : ''"
+>
+        Books
+      </NuxtLink>
       </div>
       <div class="flex justify-center gap-2 flex-wrap mt-2 text-primary-50">
         <NuxtLink
@@ -34,6 +40,8 @@
           <i class="pi pi-github" />Github
         </NuxtLink>
        
+
+
       </div>
     </div>
     <div class="px-4 pt-4 pb-8 print:p-0">

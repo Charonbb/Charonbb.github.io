@@ -26,7 +26,7 @@ export interface CvTechnicalStack {
 | "languages"
 | "Testing tools"
 | "platforms"; // <-- ИЗМЕНЕНИЕ 1: ДОБАВЛЕН ТИП "platforms"
-technologies: string[];
+ author?: string[];
 }
 
 export const CvTechnicalStackTypeMap: Record<CvTechnicalStack["type"], string> = {
@@ -57,5 +57,12 @@ export const CvTechnicalStackTypeOrder: CvTechnicalStack["type"][] = [
 "platforms",
 "languages", 
 ];
-
-// ... (остальной код интерфейсов остается без изменений)
+export interface Project {
+  name: string;
+  description: string;
+  github?: string;
+  npm?: string;
+  technologies?: string[];
+  author?: string[];
+  bookUrl?: string; // <-- ДОБАВЬТЕ ЭТО
+}
