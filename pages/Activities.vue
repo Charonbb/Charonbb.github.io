@@ -23,21 +23,21 @@ const activityGroups = {
       name: "Тестирование Дот Ком или Пособие по жестокости",
       author: ["Роман Савин"],
       description: "Практическое погружение в профессию тестировщика: как находить баги и работать в QA-команде.",
-      finishedDate: "Until Sep 2025",
+      finishedDate: "Finished Sep 2025",
       tags: ["QA"]
     },
     {
       name: "Искусство тестирования программ",
       author: ["Гленфорд Майерс", "Том Баджетт", "Кори Сандлер"],
       description: "Глубокое понимание базовых принципов эффективного тестирования программного обеспечения.",
-      finishedDate: "Until Dec 2025",
+      finishedDate: "Finished Dec 2025",
       tags: ["QA"]
     },
     {
       name: "Qa Engineer",
       author: ["Mikhail Semynin"],
       description: "Практическое введение в профессию QA-инженера: роли и задачи, основы тестирования, процессы разработки и необходимые навыки для старта в QA.",
-      finishedDate: "Present Dec 2025",
+      finishedDate: "In-progress Dec 2025",
       tags: ["QA"]
     }
   ],
@@ -46,14 +46,14 @@ const activityGroups = {
       name: "Карл и Клара продули кораллы",
       author: ["НИИ О ЧОМ"],
       description: "Ироничный подкаст про IT, жизнь и абсурд профессии.",
-      finishedDate: "Until Dec 2025",
+      finishedDate: "Finished Dec 2025",
       tags: ["SoftSkills", "Communication"]
     },
      {
       name: "Пустышка и очки",
       author: ["НИИ О ЧОМ"],
       description: "Подкаст с ироничным разбором популярных идей и «экспертных» утверждений.",
-      finishedDate: "Present Dec 2025",
+      finishedDate: "In-progress Dec 2025",
       tags: ["SoftSkills", "Communication"]
     }
   ],
@@ -62,14 +62,14 @@ const activityGroups = {
       name: "Тестирование ПО: Профессиональный курс подготовки QA",
       author: ["Леша Маршал"],
       description: "Основы тестирования, создание тест-кейсов, работа с багами и инструменты QA.",
-      finishedDate: "Until July  2025",
+      finishedDate: "Finished July 2025",
       tags: ["Learning", "QA"]
     },
     {
       name: "Клиент-серверные протоколы (REST, SOAP, GraphQL)",
       author: ["Ulbi TV"],
       description: "Теория взаимодействия: REST API, SOAP, GraphQL, WebSockets, gRPC.",
-      finishedDate: "Until September 2025",
+      finishedDate: "Finished September 2025",
       tags: ["API", "Backend", "Theory"]
     }
   ]
