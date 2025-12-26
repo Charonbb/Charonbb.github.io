@@ -53,7 +53,21 @@ const activityGroups = {
       name: "Пустышка и очки",
       author: ["НИИ О ЧОМ"],
       description: "Подкаст с ироничным разбором популярных идей и «экспертных» утверждений.",
-      finishedDate: "In-progress Dec 2025",
+      finishedDate: "Dec 2025",
+      tags: ["SoftSkills", "Communication"]
+    },
+      {
+      name: "Отдел продашь?",
+      author: ["НИИ О ЧОМ"],
+      description: "Ироничное исследование того, как нам пытаются продать бесполезные идеи, тренды и лайфхаки под видом уникальных знаний.",
+      finishedDate: "Dec 2025",
+      tags: ["SoftSksills", "Communication"]
+    },
+      {
+      name: "Слет. Что это было?",
+      author: ["НИИ О ЧОМ"],
+      description: "Подкаст о слёте: обсуждение события, впечатления участников и основные выводы.",
+      finishedDate: " In progress Dec 2025",
       tags: ["SoftSkills", "Communication"]
     }
   ],
