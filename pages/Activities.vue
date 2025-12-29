@@ -67,7 +67,7 @@ const activityGroups = {
       name: "Слет. Что это было?",
       author: ["НИИ О ЧОМ"],
       description: "Подкаст о слёте: обсуждение события, впечатления участников и основные выводы.",
-      finishedDate: " In progress Dec 2025",
+      finishedDate: " Dec 2025",
       tags: ["SoftSkills", "Communication"]
     }
   ],
