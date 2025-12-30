@@ -69,6 +69,13 @@ const activityGroups = {
       description: "Подкаст о слёте: обсуждение события, впечатления участников и основные выводы.",
       finishedDate: " Dec 2025",
       tags: ["SoftSkills", "Communication"]
+      },
+         {
+      name: "Новогодняя прожарка. Часть 1.",
+      author: ["НИИ О ЧОМ"],
+      description: "Честный и жесткий разбор главных событий года.",
+      finishedDate: " In progress Dec 2025",
+      tags: ["SoftSkills", "Communication"]
     }
   ],
   "Обучающие видео": [
