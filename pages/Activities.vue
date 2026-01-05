@@ -39,7 +39,15 @@ const activityGroups = {
       description: "Практическое введение в профессию QA-инженера: роли и задачи, основы тестирования, процессы разработки и необходимые навыки для старта в QA.",
       finishedDate: "In-progress Dec 2025",
       tags: ["QA"]
-    }
+    },
+      {
+  name: "Над пропастью во ржи",
+  author: ["Дж. Д. Сэлинджер"],
+  description: "История о подростковом кризисе, поиске искренности и неприятии фальши взрослого мира глазами Холдена Колфилда.",
+  finishedDate: "In progress Dec 2026",
+  tags: ["Классика", "Зарубежная литература", "Роман"]
+     }
+
   ],
   "Подкасты": [
     {
@@ -73,8 +81,15 @@ const activityGroups = {
          {
       name: "Новогодняя прожарка. Часть 1.",
       author: ["НИИ О ЧОМ"],
-      description: "Честный и жесткий разбор главных событий года.",
-      finishedDate: " In progress Dec 2025",
+      description: "Честный и жесткий разбор о речи людей.",
+      finishedDate: "Dec 2025",
+      tags: ["SoftSkills", "Communication"]
+         },
+               {
+      name: "Новогодняя прожарка. Часть 2.",
+      author: ["НИИ О ЧОМ"],
+      description: "Честный и жесткий разбор о речи людей",
+      finishedDate: "In progressDec 2025",
       tags: ["SoftSkills", "Communication"]
     }
   ],
