@@ -89,6 +89,13 @@ const activityGroups = {
       name: "Новогодняя прожарка. Часть 2.",
       author: ["НИИ О ЧОМ"],
       description: "Честный и жесткий разбор о речи людей",
+      finishedDate: "Dec 2025",
+      tags: ["SoftSkills", "Communication"]
+               },
+   {
+      name: "Покупайте наших слонов!",
+      author: ["НИИ О ЧОМ"],
+      description: "Ироничный разбор маркетинговых уловок и стратегий продаж.",
       finishedDate: "In progressDec 2025",
       tags: ["SoftSkills", "Communication"]
     }
