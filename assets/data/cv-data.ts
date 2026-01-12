@@ -149,7 +149,7 @@ export const totalMonths = calculateTotalExperienceMonths(experiences);
 // SUMMARY и все остальное
 // ----------------------
 export const professionalSummary = (() => {
-  return `Junior Quality Assurance (QA) Specialist with 6 months of practical experience in functional, smoke, and regression testing. Proficient in using modern QA tools such as Jira, Postman, and Swagger. Motivated to advance in test automation with Python and Selenium, with a strong focus on delivering high-quality, reliable products in Agile environments.`;
+  return `Junior Quality Assurance (QA) Specialist with 7 months of practical experience in functional, smoke, and regression testing. Proficient in using modern QA tools such as Jira, Postman, and Swagger. Motivated to advance in test automation with Python and Selenium, with a strong focus on delivering high-quality, reliable products in Agile environments.`;
 })();
 
 // ... (Остальной код, который вы присылали: EDUCATION, AWARDS, LANGUAGES, SKILLS LOGIC)
