@@ -96,7 +96,14 @@ const activityGroups = {
       name: "Покупайте наших слонов!",
       author: ["НИИ О ЧОМ"],
       description: "Ироничный разбор маркетинговых уловок и стратегий продаж.",
-      finishedDate: "In progressDec 2025",
+      finishedDate: "Dec 2025",
+      tags: ["SoftSkills", "Communication"]
+    },
+     {
+      name: "Как читать, чтобы все  слушали?",
+      author: ["НИИ О ЧОМ"],
+      description: "Советы по эффективному чтению и удержанию внимания аудитории.",
+      finishedDate: "In progress Dec 2025",
       tags: ["SoftSkills", "Communication"]
     }
   ],
