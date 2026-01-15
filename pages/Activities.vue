@@ -37,7 +37,7 @@ const activityGroups = {
       name: "Qa Engineer",
       author: ["Mikhail Semynin"],
       description: "Практическое введение в профессию QA-инженера: роли и задачи, основы тестирования, процессы разработки и необходимые навыки для старта в QA.",
-      finishedDate: "In-progress Dec 2025",
+      finishedDate: "Dec 2025",
       tags: ["QA"]
     },
       {
@@ -103,7 +103,7 @@ const activityGroups = {
       name: "Как читать, чтобы все  слушали?",
       author: ["НИИ О ЧОМ"],
       description: "Советы по эффективному чтению и удержанию внимания аудитории.",
-      finishedDate: "In progress Dec 2025",
+      finishedDate: "Dec 2025",
       tags: ["SoftSkills", "Communication"]
     }
   ],
