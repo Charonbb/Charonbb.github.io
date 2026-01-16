@@ -105,6 +105,13 @@ const activityGroups = {
       description: "Советы по эффективному чтению и удержанию внимания аудитории.",
       finishedDate: "Dec 2025",
       tags: ["SoftSkills", "Communication"]
+    },
+      {
+      name: "Такой у нас характер.",
+      author: ["НИИ О ЧОМ"],
+      description: "Обсуждение влияния характера на профессиональную и личную жизнь.",
+      finishedDate: "Dec 2025",
+      tags: ["SoftSkills", "Communication"]
     }
   ],
   "Обучающие видео": [
