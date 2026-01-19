@@ -112,6 +112,13 @@ const activityGroups = {
       description: "Обсуждение влияния характера на профессиональную и личную жизнь.",
       finishedDate: "In progress",
       tags: ["SoftSkills", "Communication"]
+    },
+        {
+      name: "Руслан белый: шутинг, Европовидение и кроссовки",
+      author: ["kuji podcast"],
+      description: "Разбор карьеры Руслана Белого, обсуждение комедийных проектов и культуры кроссовок.",
+      finishedDate: "In progress",
+      tags: ["Critical Thinking", "Comedy"]
     }
   ],
   "Обучающие видео": [
