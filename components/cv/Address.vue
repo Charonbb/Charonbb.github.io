@@ -14,8 +14,8 @@
       
       <div>
         <span class="text-gray-500">Phone: </span>
-        <a class="hover:text-primary-500" href="tel:+996558826282">
-          +996 709 777 696
+        <a class="hover:text-primary-500" href="tel:+996709006934">
+          +996 709 006 934
         </a>
       </div>
       
