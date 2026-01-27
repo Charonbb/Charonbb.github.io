@@ -37,14 +37,14 @@ const activityGroups = {
       name: "Qa Engineer",
       author: ["Mikhail Semynin"],
       description: "Практическое введение в профессию QA-инженера: роли и задачи, основы тестирования, процессы разработки и необходимые навыки для старта в QA.",
-      finishedDate: "jan 2025",
+      finishedDate: "jan 2026",
       tags: ["QA"]
     },
       {
   name: "Над пропастью во ржи",
   author: ["Дж. Д. Сэлинджер"],
   description: "История о подростковом кризисе, поиске искренности и неприятии фальши взрослого мира глазами Холдена Колфилда.",
-  finishedDate: "In progress",
+  finishedDate: "Jan 2026",
   tags: ["Классика", "Зарубежная литература", "Роман"]
      }
 
@@ -89,35 +89,35 @@ const activityGroups = {
       name: "Новогодняя прожарка. Часть 2.",
       author: ["НИИ О ЧОМ"],
       description: "Честный и жесткий разбор о речи людей",
-      finishedDate: "Jan 2025",
+      finishedDate: "Jan 2026",
       tags: ["SoftSkills", "Communication"]
                },
    {
       name: "Покупайте наших слонов!",
       author: ["НИИ О ЧОМ"],
       description: "Ироничный разбор маркетинговых уловок и стратегий продаж.",
-      finishedDate: "Jan 2025",
+      finishedDate: "Jan 2026",
       tags: ["SoftSkills", "Communication"]
     },
      {
       name: "Как читать, чтобы все  слушали?",
       author: ["НИИ О ЧОМ"],
       description: "Советы по эффективному чтению и удержанию внимания аудитории.",
-      finishedDate: "Jan 2025",
+      finishedDate: "Jan 2026",
       tags: ["SoftSkills", "Communication"]
     },
       {
       name: "Такой у нас характер.",
       author: ["НИИ О ЧОМ"],
       description: "Обсуждение влияния характера на профессиональную и личную жизнь.",
-      finishedDate: "In progress",
+      finishedDate: "Jan 2026",
       tags: ["SoftSkills", "Communication"]
     },
         {
       name: "Руслан белый: шутинг, Европовидение и кроссовки",
       author: ["kuji podcast"],
       description: "Разбор карьеры Руслана Белого, обсуждение комедийных проектов и культуры кроссовок.",
-      finishedDate: "In progress",
+      finishedDate: "Jan 2026",
       tags: ["Critical Thinking", "Comedy"]
     }
   ],
